@@ -25,6 +25,8 @@ func main() {
 	}
 
 	server := http.NewServer(vm, port)
+	fmt.Println("Server started on port " + port)
+	fmt.Println("Visit http://localhost:" + port + "/installer")
 	if err := server.ListenAndServe(); err != nil {
 		panic("could not start server: " + err.Error())
 	}

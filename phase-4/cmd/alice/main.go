@@ -9,8 +9,10 @@ import (
 	"github.com/gnolang/gno/gno.me/server"
 )
 
+const port = "4591"
+
 func main() {
-	gnoServer := server.Start("4591", "")
+	gnoServer := server.Start(port, "")
 
 	// Create a channel to receive signals.
 	sigs := make(chan os.Signal, 1)
@@ -26,6 +28,9 @@ func main() {
 		gnoServer.Stop()
 		close(done)
 	}()
+
+	fmt.Println("Server started on port " + port)
+	fmt.Println("Visit http://localhost:" + port + "/installer")
 
 	<-done
 }
