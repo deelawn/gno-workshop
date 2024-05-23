@@ -45,4 +45,4 @@ require (
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
 
-replace github.com/gnolang/gno => github.com/deelawn/gno v0.0.3-workshop
+replace github.com/gnolang/gno => github.com/deelawn/gno v0.0.4-workshop
